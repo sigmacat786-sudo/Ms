@@ -63,6 +63,7 @@ async def start_cmd(client: Client, message: Message):
     mention = message.from_user.mention
     text = (
         f"**Welcome** {mention} ❤️👻.\n"
+        "im **Nawaab Helper Bot** 🙈🫂.\n"
         "**send me Any Link!**\n"
         "i will edits and Create a txt file for you\n\n"
         "Know more about how to use me send /help to Me Hurry up😘.\n\n"
