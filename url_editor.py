@@ -121,6 +121,15 @@ def edit_video_url(raw_url: str) -> str | None:
     if PWTHOR_LONG_PROXY_PREFIX.match(url):
         url = PWTHOR_LONG_PROXY_PREFIX.sub("https://p01--streamthorr--8zqnnv98yzb8.code.run/stream/", url)
 
+    if MS_PROXY_PREFIX.match(url):
+        url = MS_PROXY_PREFIX.sub("https://bidweb.lol/d1d34p8vz63oiq.cloudfront.net/", url)
+
+    if MS2_PROXY_PREFIX.match(url):
+        url = MS2_PROXY_PREFIX.sub("##focus here idhar decoding wala url hoga so obviously as is it pass karna hai(bas aage m3u8 me comvert", url)
+
+    if MS3_PROXY_PREFIX.match(url):
+        url = MS3_PROXY_PREFIX.sub("https://streams.examcrushers.in/stream/", url)
+
     if PWTHOR_LONNG_PROXY_PREFIX.match(url):
         url = PWTHOR_LONNG_PROXY_PREFIX.sub("https://p01--streamthorr--fttnk8y47n9c.code.run/stream/", url) #Double NN hai LONNG yahi diffrence hai bro.
 
