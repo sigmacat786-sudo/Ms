@@ -40,6 +40,7 @@ import re
 from urllib.parse import quote
 
 from config import RENDER_PLAYER_BASE
+from decoding import decode_ms2_url
 
 # Proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
 PWTHOR_PROXY_PREFIX = re.compile(r"^https://proxy\.pwthor\.live/play/", re.IGNORECASE)
@@ -55,10 +56,10 @@ PWTHORstthor_PROXY_PREFIX = re.compile(r"^https://p01--streamthorr--8zqnnv98yzb8
 #Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
 MS_PROXY_PREFIX = re.compile(r"^https://bidweb.lol/d1d34p8vz63oiq.cloudfront.net/", re.IGNORECASE)
 
-Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
-MS2_PROXY_PREFIX = re.compile(r"^https://www.learnxpw.site/api/play?url=", re.IGNORECASE)
+#Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
+MS2_PROXY_PREFIX = re.compile(r"^https://www\.learnxpw\.site/api/play\?url=", re.IGNORECASE)
 
-Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
+#Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
 MS3_PROXY_PREFIX = re.compile(r"^https://streams.examcrushers.in/stream/", re.IGNORECASE)
 
 # testwave host that always maps to the same fixed cloudfront host.
@@ -125,7 +126,7 @@ def edit_video_url(raw_url: str) -> str | None:
         url = MS_PROXY_PREFIX.sub("https://bidweb.lol/d1d34p8vz63oiq.cloudfront.net/", url)
 
     if MS2_PROXY_PREFIX.match(url):
-        url = MS2_PROXY_PREFIX.sub("##focus here idhar decoding wala url hoga so obviously as is it pass karna hai(bas aage m3u8 me comvert", url)
+        url = decode_ms2_url(url)
 
     if MS3_PROXY_PREFIX.match(url):
         url = MS3_PROXY_PREFIX.sub("https://streams.examcrushers.in/stream/", url)
