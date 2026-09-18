@@ -52,6 +52,15 @@ PWTHORcdn_PROXY_PREFIX = re.compile(r"^https://pwthorcdn.b-cdn.net/", re.IGNOREC
 # Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
 PWTHORstthor_PROXY_PREFIX = re.compile(r"^https://p01--streamthorr--8zqnnv98yzb8.code.run/", re.IGNORECASE)
 
+#Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
+MS_PROXY_PREFIX = re.compile(r"^https://bidweb.lol/d1d34p8vz63oiq.cloudfront.net/", re.IGNORECASE)
+
+Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
+MS2_PROXY_PREFIX = re.compile(r"^https://www.learnxpw.site/api/play?url=", re.IGNORECASE)
+
+Pwthor streamthor proxy prefix that sometimes wraps a cloudfront URL. Always replaced with "https://"
+MS3_PROXY_PREFIX = re.compile(r"^https://streams.examcrushers.in/stream/", re.IGNORECASE)
+
 # testwave host that always maps to the same fixed cloudfront host.
 # Always replaced with "https://d1d34p8vz63oiq.cloudfront.net/"
 TESTWAVE_HOST_PREFIX = re.compile(r"^https://cloudfront\.testwave\.cc/", re.IGNORECASE)
